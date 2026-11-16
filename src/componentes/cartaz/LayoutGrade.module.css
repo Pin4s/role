@@ -1,0 +1,89 @@
+.raiz {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  grid-template-rows: auto 1fr auto auto;
+  gap: 1.3cqi;
+  padding: 1.3cqi;
+  background: var(--tinta);
+}
+
+.casa {
+  min-width: 0;
+  padding: 3cqi 3.6cqi;
+  background: var(--papel-cartaz);
+}
+
+.tipo,
+.numero {
+  font: 600 4.2cqi/1 var(--fonte-mono);
+  letter-spacing: 0.06em;
+}
+
+.numero {
+  text-align: right;
+}
+
+.principal {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 4cqi 4.4cqi 4.4cqi;
+}
+
+.titulo {
+  font-family: var(--fonte-display);
+  line-height: 0.94;
+  text-shadow: var(--dx) var(--dy) 0 var(--spot);
+}
+
+.titulo span {
+  display: block;
+  white-space: nowrap;
+}
+
+.artista {
+  margin-top: 2.6cqi;
+  font: 800 5.4cqi/1.1 var(--fonte-texto);
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+.dia {
+  background: var(--spot);
+  color: var(--sobre);
+  font: 400 15cqi/0.9 var(--fonte-display);
+}
+
+.dia span {
+  display: block;
+  margin-top: 1cqi;
+  font: 600 4.6cqi/1 var(--fonte-mono);
+}
+
+.hora {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 400 13cqi/1 var(--fonte-display);
+}
+
+.local {
+  font: 600 4cqi/1.2 var(--fonte-mono);
+  overflow-wrap: anywhere;
+}
+
+.local span {
+  display: block;
+  font-weight: 400;
+}
+
+.preco {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 400 9cqi/1 var(--fonte-display);
+  white-space: nowrap;
+}

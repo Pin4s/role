@@ -1,0 +1,138 @@
+.pagina {
+  max-width: var(--largura-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.cabecalho {
+  padding: 26px 0 18px;
+}
+
+.data {
+  font: 600 12px/1.3 var(--fonte-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.titulo {
+  margin-top: 0.3em;
+  font: 400 clamp(56px, 17vw, 132px)/0.92 var(--fonte-display);
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+}
+
+.marcaTexto {
+  display: inline-block;
+  padding: 0 0.08em;
+  background: linear-gradient(
+    176deg,
+    transparent 14%,
+    var(--amarelo) 14%,
+    var(--amarelo) 88%,
+    transparent 88%
+  );
+  rotate: -2deg;
+}
+
+.frase {
+  max-width: 34ch;
+  margin-top: 16px;
+  font: 800 21px/1.25 var(--fonte-texto);
+}
+
+.resumo {
+  margin-top: 6px;
+  color: var(--tinta-suave);
+  font: 500 16px/1.45 var(--fonte-texto);
+}
+
+.barra {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.botaoFiltros,
+.botaoSalvos {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 14px 0 12px;
+  border: var(--traco) solid var(--tinta);
+  font: 400 19px/1 var(--fonte-display);
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.botaoFiltros {
+  flex: 1;
+  background: var(--tinta);
+  color: var(--papel);
+}
+
+.botaoFiltros:focus-visible {
+  outline-color: var(--tinta);
+}
+
+.botaoSalvos {
+  background: var(--papel-cartaz);
+}
+
+.numero {
+  min-width: 22px;
+  padding: 3px 5px 2px;
+  background: var(--amarelo);
+  color: var(--tinta);
+  font: 600 13px/1 var(--fonte-mono);
+  text-align: center;
+}
+
+.botaoSalvos .numero {
+  background: var(--tinta);
+  color: var(--papel);
+}
+
+.secao {
+  margin-top: 26px;
+}
+
+.cabecalhoMural {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+  padding-bottom: 8px;
+  border-bottom: var(--traco-grosso) solid var(--tinta);
+}
+
+.tituloMural {
+  font: 400 26px/1 var(--fonte-display);
+  text-transform: uppercase;
+}
+
+.contagem {
+  flex: none;
+  font: 600 13px/1 var(--fonte-mono);
+  text-transform: uppercase;
+}
+
+@media (min-width: 900px) {
+  .cabecalho {
+    padding: 40px 0 26px;
+  }
+
+  .barra {
+    justify-content: flex-start;
+  }
+
+  .botaoFiltros {
+    flex: none;
+  }
+
+  .tituloMural {
+    font-size: 34px;
+  }
+}

@@ -1,0 +1,84 @@
+.acoes {
+  margin-top: 22px;
+}
+
+.vou {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 64px;
+  padding: 0 20px;
+  border: var(--traco-grosso) solid var(--tinta);
+  background: var(--laranja);
+  color: var(--tinta);
+  box-shadow: 4px 4px 0 var(--tinta);
+  transition:
+    translate 0.08s ease,
+    box-shadow 0.08s ease;
+}
+
+.vou:active {
+  translate: 3px 3px;
+  box-shadow: 1px 1px 0 var(--tinta);
+}
+
+.vouTexto {
+  font: 400 34px/1 var(--fonte-display);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.vouConta {
+  font: 600 14px/1 var(--fonte-mono);
+  text-transform: uppercase;
+}
+
+.vouMarcado {
+  background: var(--tinta);
+  color: var(--papel);
+  box-shadow: 4px 4px 0 var(--laranja);
+}
+
+.vouMarcado:focus-visible {
+  outline-color: var(--tinta);
+}
+
+.confirmacao {
+  min-height: 1.5em;
+  margin-top: 10px;
+  font: 800 17px/1.4 var(--fonte-texto);
+}
+
+.secundarias {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.secundaria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 76px;
+  padding: 10px 6px;
+  border: var(--traco) solid var(--tinta);
+  background: var(--papel-cartaz);
+  font: 600 13px/1.2 var(--fonte-mono);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.secundaria:hover {
+  background: var(--papel-escuro);
+}
+
+.salvo,
+.salvo:hover {
+  background: var(--amarelo);
+}

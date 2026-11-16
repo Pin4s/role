@@ -1,0 +1,73 @@
+.raiz {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 6cqi 6cqi 0;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  gap: 2cqi;
+  padding-bottom: 2.6cqi;
+  border-bottom: 0.9cqi solid var(--tinta);
+  font: 600 4.6cqi/1 var(--fonte-mono);
+  letter-spacing: 0.04em;
+}
+
+.titulo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3cqi 0;
+  font-family: var(--fonte-display);
+  line-height: 0.94;
+  text-align: center;
+  text-shadow: var(--dx) var(--dy) 0 var(--spot);
+}
+
+.titulo span {
+  display: block;
+  white-space: nowrap;
+}
+
+.faixa {
+  position: relative;
+  margin: 0 -6cqi;
+  padding: 4.6cqi 6cqi 5.4cqi;
+  background: var(--spot);
+  color: var(--sobre);
+}
+
+/* Fio de tinta fora de registro em relação à cor. */
+.faixa::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  border-top: 0.9cqi solid var(--tinta);
+  transform: translate(calc(var(--dx) * -1), calc(var(--dy) * -1.4));
+}
+
+.artista {
+  font: 800 6.2cqi/1.08 var(--fonte-texto);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  overflow-wrap: anywhere;
+}
+
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  gap: 2cqi;
+  margin-top: 2.6cqi;
+  font: 600 4.4cqi/1.1 var(--fonte-mono);
+}
+
+.local {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,68 @@
+.pagina {
+  max-width: var(--largura-max);
+  margin: 0 auto;
+  padding: 18px var(--gutter) 0;
+}
+
+.voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding-right: 8px;
+  font: 600 13px/1 var(--fonte-mono);
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.voltar:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.grade {
+  display: grid;
+  gap: 34px;
+  margin-top: 18px;
+}
+
+.colunaCartaz {
+  padding: 8px 10px 0;
+}
+
+.cartaz {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.colunaInfo {
+  min-width: 0;
+}
+
+.descricao {
+  position: relative;
+  margin-top: 22px;
+  padding-left: 16px;
+  border-left: 4px solid var(--tinta);
+  font: 600 19px/1.45 var(--fonte-texto);
+}
+
+@media (min-width: 900px) {
+  .grade {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    align-items: start;
+    gap: 56px;
+  }
+
+  .colunaCartaz {
+    position: sticky;
+    top: 24px;
+    padding-top: 14px;
+  }
+
+  .cartaz {
+    max-width: 460px;
+  }
+}

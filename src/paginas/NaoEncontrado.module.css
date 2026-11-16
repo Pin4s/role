@@ -1,0 +1,47 @@
+.pagina {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 48px var(--gutter) 0;
+}
+
+.codigo {
+  display: inline-block;
+  padding: 0 0.12em;
+  border: 0.06em solid var(--tinta);
+  font: 400 clamp(96px, 34vw, 180px)/1 var(--fonte-display);
+  text-shadow: 0.03em 0.02em 0 var(--rosa);
+  rotate: -4deg;
+  -webkit-mask-image: var(--falhas);
+  mask-image: var(--falhas);
+  -webkit-mask-size: 220px;
+  mask-size: 220px;
+}
+
+.titulo {
+  margin-top: 28px;
+  font: 400 clamp(36px, 10vw, 60px)/0.95 var(--fonte-display);
+  text-transform: uppercase;
+}
+
+.texto {
+  margin-top: 14px;
+  font: 500 18px/1.45 var(--fonte-texto);
+}
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  min-height: 52px;
+  margin-top: 22px;
+  padding: 0 20px;
+  background: var(--tinta);
+  color: var(--papel);
+  font: 400 21px/1 var(--fonte-display);
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.botao:focus-visible {
+  outline-color: var(--tinta);
+}

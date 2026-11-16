@@ -1,0 +1,32 @@
+.contagem + .contagem {
+  margin-top: 22px;
+}
+
+.numeros {
+  font: 600 15px/1.3 var(--fonte-mono);
+  text-transform: uppercase;
+}
+
+.atual {
+  font: 400 44px/1 var(--fonte-display);
+  vertical-align: -0.1em;
+}
+
+.casas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(22px, 1fr));
+  gap: 5px;
+  max-width: 560px;
+  margin-top: 10px;
+}
+
+.casa {
+  aspect-ratio: 1;
+  border: var(--traco) solid var(--tinta);
+  background: rgb(248 244 236 / 0.6);
+}
+
+.cheia {
+  background: var(--tinta);
+  box-shadow: inset 0 0 0 3px var(--amarelo);
+}

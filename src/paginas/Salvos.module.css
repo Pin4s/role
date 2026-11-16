@@ -1,0 +1,56 @@
+.pagina {
+  max-width: var(--largura-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.cabecalho {
+  padding: 28px 0 26px;
+}
+
+.titulo {
+  font: 400 clamp(56px, 16vw, 112px)/0.9 var(--fonte-display);
+  text-transform: uppercase;
+  text-shadow: 3px 2px 0 var(--azul);
+}
+
+.texto {
+  margin-top: 10px;
+  font: 600 18px/1.4 var(--fonte-texto);
+}
+
+.vazio {
+  max-width: 520px;
+  padding: 24px 22px;
+  border: var(--traco) dashed var(--tinta);
+  background: var(--papel-cartaz);
+  rotate: -1deg;
+}
+
+.vazioTitulo {
+  font: 400 40px/1 var(--fonte-display);
+  text-transform: uppercase;
+}
+
+.vazioTexto {
+  margin-top: 8px;
+  font: 500 18px/1.4 var(--fonte-texto);
+}
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  margin-top: 16px;
+  padding: 0 18px;
+  background: var(--tinta);
+  color: var(--papel);
+  font: 400 19px/1 var(--fonte-display);
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.botao:focus-visible {
+  outline-color: var(--tinta);
+}

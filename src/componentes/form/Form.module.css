@@ -1,0 +1,157 @@
+.campo,
+.grupo {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.pilha > * + * {
+  margin-top: 24px;
+}
+
+/* Na legend, o float tira ela do encaixe especial na borda do fieldset. */
+legend.rotulo {
+  float: left;
+  width: 100%;
+}
+
+.rotulo {
+  display: block;
+  margin-bottom: 8px;
+  padding: 0;
+  font: 600 13px/1.2 var(--fonte-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dicaInline {
+  color: var(--tinta-suave);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.entrada,
+.selecao,
+.area {
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  padding: 10px 12px;
+  border: var(--traco) solid var(--tinta);
+  border-radius: 0;
+  background: var(--papel-cartaz);
+  font: 500 18px/1.3 var(--fonte-texto);
+}
+
+.entrada::placeholder,
+.area::placeholder {
+  color: #6b645e;
+}
+
+.entrada:focus-visible,
+.selecao:focus-visible,
+.area:focus-visible {
+  outline-offset: 2px;
+  background: #fff;
+}
+
+.entrada[aria-invalid='true'],
+.selecao[aria-invalid='true'] {
+  border-color: #b3261e;
+  box-shadow: inset 0 0 0 1px #b3261e;
+}
+
+.area {
+  min-height: 92px;
+  resize: vertical;
+}
+
+.selecao {
+  appearance: none;
+  padding-right: 40px;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--tinta) 50%),
+    linear-gradient(135deg, var(--tinta) 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) 50%,
+    calc(100% - 14px) 50%;
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.comPrefixo {
+  display: flex;
+  align-items: stretch;
+}
+
+.prefixo {
+  display: grid;
+  place-items: center;
+  padding: 0 12px;
+  border: var(--traco) solid var(--tinta);
+  border-right: 0;
+  background: var(--tinta);
+  color: var(--papel);
+  font: 600 16px/1 var(--fonte-mono);
+}
+
+.dica {
+  margin-top: 6px;
+  color: var(--tinta-suave);
+  font: 400 13px/1.4 var(--fonte-mono);
+}
+
+.erro {
+  margin-top: 6px;
+  color: #a1221b;
+  font: 600 14px/1.4 var(--fonte-texto);
+}
+
+.opcoes {
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.opcao {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  min-height: 44px;
+  padding: 10px 13px 9px;
+  border: var(--traco) solid var(--tinta);
+  background: var(--papel-cartaz);
+  font: 600 15px/1.2 var(--fonte-texto);
+  cursor: pointer;
+}
+
+.opcao:hover {
+  background: var(--papel-escuro);
+}
+
+.opcao:has(:focus-visible) {
+  outline: 3px solid var(--tinta);
+  outline-offset: 3px;
+}
+
+.opcaoMarcada,
+.opcaoMarcada:hover {
+  background: var(--amarelo);
+  rotate: -1.5deg;
+}
+
+.detalhe {
+  font: 500 12px/1 var(--fonte-mono);
+}
+
+.entradaEscondida {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  pointer-events: none;
+}

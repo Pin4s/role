@@ -1,0 +1,21 @@
+/* Uma cor spot por cartaz. --sobre é a cor do texto em cima da spot
+   (azul pede papel; as outras aguentam tinta com contraste AA). */
+.laranja {
+  --spot: var(--laranja);
+  --sobre: var(--tinta);
+}
+
+.rosa {
+  --spot: var(--rosa);
+  --sobre: var(--tinta);
+}
+
+.azul {
+  --spot: var(--azul);
+  --sobre: var(--papel-cartaz);
+}
+
+.amarelo {
+  --spot: var(--amarelo);
+  --sobre: var(--tinta);
+}

@@ -1,0 +1,31 @@
+.chip {
+  min-height: 44px;
+  padding: 9px 13px 8px;
+  border: var(--traco) solid var(--tinta);
+  background: var(--papel-cartaz);
+  font: 600 15px/1.2 var(--fonte-texto);
+  text-align: left;
+  transition: rotate 0.15s ease;
+}
+
+.chip:hover {
+  background: var(--papel-escuro);
+}
+
+.ativo,
+.ativo:hover {
+  background: var(--amarelo);
+  rotate: -1.5deg;
+}
+
+.ativo::before {
+  content: '';
+  display: inline-block;
+  width: 0.5em;
+  height: 0.9em;
+  margin: 0 8px -0.05em 1px;
+  border: solid var(--tinta);
+  border-width: 0 3px 3px 0;
+  rotate: 40deg;
+  translate: 0 -0.15em;
+}

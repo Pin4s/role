@@ -1,0 +1,31 @@
+.moldura {
+  min-height: 100dvh;
+  padding-bottom: calc(var(--altura-nav) + env(safe-area-inset-bottom));
+}
+
+.conteudo {
+  display: block;
+}
+
+.pular {
+  position: absolute;
+  z-index: 30;
+  top: 8px;
+  left: 8px;
+  padding: 10px 14px;
+  background: var(--tinta);
+  color: var(--papel);
+  font: 600 14px/1 var(--fonte-mono);
+  translate: 0 -200%;
+}
+
+.pular:focus-visible {
+  translate: 0 0;
+  outline-color: var(--amarelo);
+}
+
+@media (min-width: 900px) {
+  .moldura {
+    padding-bottom: 0;
+  }
+}

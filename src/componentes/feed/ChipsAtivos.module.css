@@ -1,0 +1,38 @@
+.chipsAtivos {
+  margin-top: 12px;
+}
+
+.lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 6px 8px 5px 12px;
+  border: 0;
+  background: var(--amarelo);
+  font: 600 14px/1.2 var(--fonte-texto);
+}
+
+.chip:hover {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+.limpar {
+  min-height: 36px;
+  padding: 6px 10px;
+  border: 0;
+  background: none;
+  font: 600 13px/1.2 var(--fonte-mono);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-transform: uppercase;
+}

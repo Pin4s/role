@@ -1,0 +1,16 @@
+.rodape {
+  max-width: var(--largura-max);
+  margin: 56px auto 0;
+  padding: 18px var(--gutter) 28px;
+  border-top: var(--traco) dashed var(--tinta);
+}
+
+.aviso {
+  font: 600 13px/1.4 var(--fonte-mono);
+}
+
+.credito {
+  margin-top: 4px;
+  color: var(--tinta-suave);
+  font: 400 12px/1.5 var(--fonte-mono);
+}

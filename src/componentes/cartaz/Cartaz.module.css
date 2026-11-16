@@ -1,0 +1,173 @@
+.cartaz {
+  container-type: inline-size;
+  position: relative;
+  rotate: var(--giro, 0deg);
+  text-align: left;
+}
+
+.folha {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: var(--papel-cartaz);
+  color: var(--tinta);
+  box-shadow:
+    0 1px 1px rgb(22 20 18 / 0.16),
+    0 3px 5px -2px rgb(22 20 18 / 0.2);
+}
+
+/* Grão do papel por cima da impressão. */
+.folha::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--ruido);
+  mix-blend-mode: multiply;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.fita {
+  position: absolute;
+  z-index: 2;
+  top: -3.6cqi;
+  left: 50%;
+  width: 32cqi;
+  height: 8.4cqi;
+  translate: -50% 0;
+  rotate: calc(var(--giro, 0deg) * -2 - 2deg);
+  background: var(--fita);
+  mix-blend-mode: multiply;
+  clip-path: polygon(
+    2% 0, 98% 0, 100% 16%, 97% 32%, 100% 48%, 97% 64%, 100% 80%, 98% 100%,
+    2% 100%, 0 84%, 3% 68%, 0 52%, 3% 36%, 0 20%
+  );
+}
+
+/* Carimbos do Rolê: tinta com falha, linha dupla. */
+.carimbo {
+  position: absolute;
+  z-index: 3;
+  padding: 1.6cqi 2.8cqi 1.2cqi;
+  border: 0.9cqi solid var(--tinta);
+  background: rgb(248 244 236 / 0.9);
+  box-shadow:
+    inset 0 0 0 0.7cqi rgb(248 244 236 / 0.9),
+    inset 0 0 0 1.1cqi var(--tinta);
+  color: var(--tinta);
+  font-family: var(--fonte-display);
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  -webkit-mask-image: var(--falhas);
+  mask-image: var(--falhas);
+  -webkit-mask-size: 70cqi;
+  mask-size: 70cqi;
+}
+
+.destaque {
+  top: -2.4cqi;
+  right: -3cqi;
+  font-size: 6.6cqi;
+  rotate: 7deg;
+}
+
+.capa {
+  top: -3cqi;
+  right: -3.4cqi;
+  padding: 2.2cqi 3.4cqi 1.8cqi;
+  font-size: 7.4cqi;
+  line-height: 0.98;
+  text-align: center;
+  rotate: 8deg;
+}
+
+.novo {
+  position: absolute;
+  z-index: 3;
+  top: -2.2cqi;
+  left: -2.6cqi;
+  padding: 1.6cqi 2.8cqi 1.2cqi;
+  background: var(--tinta);
+  color: var(--papel-cartaz);
+  font: 400 6.4cqi/1 var(--fonte-display);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  rotate: -6deg;
+}
+
+.vou {
+  position: absolute;
+  z-index: 3;
+  right: 5cqi;
+  bottom: 5cqi;
+  width: 34cqi;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  border: 1.3cqi solid var(--tinta);
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 0 1cqi rgb(248 244 236 / 0.7),
+    inset 0 0 0 1.6cqi var(--tinta);
+  background: rgb(248 244 236 / 0.7);
+  color: var(--tinta);
+  font: 400 14cqi/0.9 var(--fonte-display);
+  text-align: center;
+  text-transform: uppercase;
+  rotate: -13deg;
+  -webkit-mask-image: var(--falhas);
+  mask-image: var(--falhas);
+  -webkit-mask-size: 60cqi;
+  mask-size: 60cqi;
+}
+
+.vou small {
+  display: block;
+  margin-top: 1.2cqi;
+  font: 600 3.8cqi/1 var(--fonte-mono);
+  letter-spacing: 0.08em;
+}
+
+.batendo {
+  animation: bater 0.5s cubic-bezier(0.3, 0.6, 0.35, 1.25) both;
+}
+
+.tremendo {
+  animation: tremor 0.3s 0.26s ease-out;
+}
+
+@keyframes bater {
+  0% {
+    opacity: 0;
+    transform: scale(2.6);
+  }
+  55% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+  78% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes tremor {
+  0%,
+  100% {
+    transform: none;
+  }
+  25% {
+    transform: translate(-2px, 1.5px);
+  }
+  50% {
+    transform: translate(1.5px, -1px);
+  }
+  75% {
+    transform: translate(-0.5px, 0.5px);
+  }
+}

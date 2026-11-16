@@ -1,0 +1,98 @@
+.raiz {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 38cqi 1fr;
+}
+
+.banda {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5cqi 4cqi;
+  background: var(--spot);
+  color: var(--sobre);
+}
+
+/* Borda de tinta fora de registro. */
+.banda::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 0 auto;
+  border-right: 1cqi solid var(--tinta);
+  transform: translate(var(--dx), var(--dy));
+}
+
+.titulo {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--fonte-display);
+  line-height: 0.94;
+  text-align: center;
+}
+
+.titulo span {
+  display: block;
+  white-space: nowrap;
+}
+
+.lado {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 6cqi 5cqi 5cqi 6cqi;
+}
+
+.tipo {
+  font: 600 4.4cqi/1 var(--fonte-mono);
+  letter-spacing: 0.06em;
+}
+
+.dia {
+  margin-top: 5cqi;
+  font: 400 21cqi/0.9 var(--fonte-display);
+  text-shadow: var(--dx) var(--dy) 0 var(--spot);
+}
+
+.data {
+  font: 600 6cqi/1.2 var(--fonte-mono);
+}
+
+.hora {
+  margin-top: 1.5cqi;
+  font: 400 11cqi/1 var(--fonte-display);
+}
+
+.artista {
+  margin-top: auto;
+  font: 800 5.6cqi/1.1 var(--fonte-texto);
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+.base {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2cqi;
+  margin-top: 3cqi;
+  padding-top: 2.4cqi;
+  border-top: 0.8cqi solid var(--tinta);
+}
+
+.local {
+  min-width: 0;
+  font: 600 3.9cqi/1.2 var(--fonte-mono);
+  overflow-wrap: anywhere;
+}
+
+.local span {
+  display: block;
+  font-weight: 400;
+}
+
+.preco {
+  flex: none;
+  font: 400 8cqi/1 var(--fonte-display);
+}

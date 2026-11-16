@@ -1,0 +1,53 @@
+.faixa {
+  position: relative;
+  max-width: 720px;
+  margin: 56px auto 0;
+  padding: 30px 22px 24px;
+  background: var(--amarelo);
+  rotate: -1deg;
+  box-shadow:
+    0 1px 1px rgb(22 20 18 / 0.16),
+    0 3px 5px -2px rgb(22 20 18 / 0.2);
+}
+
+.fita {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 120px;
+  height: 26px;
+  translate: -50% 0;
+  rotate: 2deg;
+  background: var(--fita);
+  mix-blend-mode: multiply;
+  clip-path: polygon(2% 0, 98% 0, 100% 25%, 97% 50%, 100% 75%, 98% 100%, 2% 100%, 0 75%, 3% 50%, 0 25%);
+}
+
+.titulo {
+  font: 400 clamp(34px, 9vw, 52px)/0.95 var(--fonte-display);
+  text-transform: uppercase;
+}
+
+.texto {
+  margin-top: 8px;
+  font: 600 18px/1.35 var(--fonte-texto);
+}
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 50px;
+  margin-top: 16px;
+  padding: 0 18px;
+  background: var(--tinta);
+  color: var(--amarelo);
+  font: 400 20px/1 var(--fonte-display);
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.botao:hover {
+  background: #000;
+}

@@ -1,0 +1,98 @@
+.raiz {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 6cqi;
+}
+
+.selo {
+  position: absolute;
+  top: -5cqi;
+  right: -9cqi;
+  width: 70cqi;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--spot);
+  color: var(--sobre);
+}
+
+/* Contorno de tinta deslocado: o riso nunca casa perfeito. */
+.selo::after {
+  content: '';
+  position: absolute;
+  inset: 3cqi;
+  border: 0.8cqi solid var(--tinta);
+  border-radius: 50%;
+  transform: translate(var(--dx), var(--dy));
+}
+
+.anel {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.anelTexto {
+  fill: currentColor;
+  font-family: var(--fonte-mono);
+  font-weight: 600;
+  font-size: 6.6px;
+  letter-spacing: 0.04em;
+}
+
+.valor {
+  position: relative;
+  margin-top: 4cqi;
+  margin-right: 6cqi;
+  font: 400 15cqi/1 var(--fonte-display);
+  white-space: nowrap;
+}
+
+.tipo {
+  position: relative;
+  font: 600 4.4cqi/1 var(--fonte-mono);
+  letter-spacing: 0.06em;
+}
+
+.corpo {
+  position: relative;
+  margin-top: auto;
+}
+
+.titulo {
+  font-family: var(--fonte-display);
+  line-height: 0.94;
+  text-shadow: var(--dx) var(--dy) 0 var(--spot);
+}
+
+.titulo span {
+  display: block;
+  white-space: nowrap;
+}
+
+.artista {
+  margin-top: 3cqi;
+  font: 800 5.8cqi/1.1 var(--fonte-texto);
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  gap: 2cqi;
+  margin-top: 3cqi;
+  padding-top: 2.4cqi;
+  border-top: 0.8cqi solid var(--tinta);
+  font: 600 4.4cqi/1.1 var(--fonte-mono);
+}
+
+.local {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
